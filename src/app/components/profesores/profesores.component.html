@@ -1,4 +1,5 @@
 <h5 class="text-center mt-2 mb-3 font-weight-bold text-light" > Profesores</h5>
+<a class="btn btn-primary font-weight-bold float-right mr-4 mb-4" href="./profesores/agregar">Agregar Nuevo</a>
         <div class="contenedorTabla m-auto col-12 d-flex justify-content-center flex-wrap flex-column overflow-auto">
             <table class="text-light table table-hover overflow-auto" border="1">
                 <tr>
@@ -8,141 +9,18 @@
                     <th>Telefono</th>
                     <th>Correo</th>
                     <th>Direccion</th>
-                    <th>Turnos</th>
                     <th>C.I.</th>
                     <th>Salario</th>
                 </tr>
-                <tr>
-                    <td>01</td>
-                    <td>Pedro </td>
-                    <td>Perez</td>
-                    <td>998388383</td>
-                    <td>pperez@mail.com</td>
-                    <td>calle los turpiales 123</td>
-                    <td>Tarde</td>
-                    <td>99876373</td>
-                    <td>3600</td>
-                </tr>
-                <tr>
-                    <td>01</td>
-                    <td>Pedro</td>
-                    <td>Perez</td>
-                    <td>998388383</td>
-                    <td>pperez@mail.com</td>
-                    <td>calle los turpiales 123</td>
-                    <td>Tarde</td>
-                    <td>99876373</td>
-                    <td>3600</td>
-                </tr>
-                <tr>
-                    <td>01</td>
-                    <td>Pedro</td>
-                    <td>Perez</td>
-                    <td>998388383</td>
-                    <td>pperez@mail.com</td>
-                    <td>calle los turpiales 123</td>
-                    <td>Tarde</td>
-                    <td>99876373</td>
-                    <td>3600</td>
-                </tr>
-                <tr>
-                    <td>01</td>
-                    <td>Pedro </td>
-                    <td>Perez</td>
-                    <td>998388383</td>
-                    <td>pperez@mail.com</td>
-                    <td>calle los turpiales 123</td>
-                    <td>Tarde</td>
-                    <td>99876373</td>
-                    <td>3600</td>
-                </tr>
-                <tr>
-                    <td>01</td>
-                    <td>Pedro</td>
-                    <td>Perez</td>
-                    <td>998388383</td>
-                    <td>pperez@mail.com</td>
-                    <td>calle los turpiales 123</td>
-                    <td>Tarde</td>
-                    <td>99876373</td>
-                    <td>3600</td>
-                </tr>
-                <tr>
-                    <td>01</td>
-                    <td>Pedro</td>
-                    <td>Perez</td>
-                    <td>998388383</td>
-                    <td>pperez@mail.com</td>
-                    <td>calle los turpiales 123</td>
-                    <td>Tarde</td>
-                    <td>99876373</td>
-                    <td>3600</td>
-                </tr>
-                <tr>
-                    <td>01</td>
-                    <td>Pedro </td>
-                    <td>Perez</td>
-                    <td>998388383</td>
-                    <td>pperez@mail.com</td>
-                    <td>calle los turpiales 123</td>
-                    <td>Tarde</td>
-                    <td>99876373</td>
-                    <td>3600</td>
-                </tr>
-                <tr>
-                    <td>01</td>
-                    <td>Pedro</td>
-                    <td>Perez</td>
-                    <td>998388383</td>
-                    <td>pperez@mail.com</td>
-                    <td>calle los turpiales 123</td>
-                    <td>Tarde</td>
-                    <td>99876373</td>
-                    <td>3600</td>
-                </tr>
-                <tr>
-                    <td>01</td>
-                    <td>Pedro</td>
-                    <td>Perez</td>
-                    <td>998388383</td>
-                    <td>pperez@mail.com</td>
-                    <td>calle los turpiales 123</td>
-                    <td>Tarde</td>
-                    <td>99876373</td>
-                    <td>3600</td>
-                </tr>
-                <tr>
-                    <td>01</td>
-                    <td>Pedro </td>
-                    <td>Perez</td>
-                    <td>998388383</td>
-                    <td>pperez@mail.com</td>
-                    <td>calle los turpiales 123</td>
-                    <td>Tarde</td>
-                    <td>99876373</td>
-                    <td>3600</td>
-                </tr>
-                <tr>
-                    <td>01</td>
-                    <td>Pedro</td>
-                    <td>Perez</td>
-                    <td>998388383</td>
-                    <td>pperez@mail.com</td>
-                    <td>calle los turpiales 123</td>
-                    <td>Tarde</td>
-                    <td>99876373</td>
-                    <td>3600</td>
-                </tr>
-                <tr>
-                    <td>01</td>
-                    <td>Pedro</td>
-                    <td>Perez</td>
-                    <td>998388383</td>
-                    <td>pperez@mail.com</td>
-                    <td>calle los turpiales 123</td>
-                    <td>Tarde</td>
-                    <td>99876373</td>
-                    <td>3600</td>
+                <tr *ngFor="let profesor of profesores; let i = index">
+                    <td>{{ i + 1 }}</td>
+                    <td>{{ profesor.nombre }}</td>
+                    <td>{{ profesor.apellido }}</td>
+                    <td>{{ profesor.telefono }}</td>
+                    <td>{{ profesor.correo }}</td>
+                    <td>{{ profesor.direccion }}</td>
+                    <td>{{ profesor.ci }}</td>
+                    <td>{{ profesor.salario }}</td>
                 </tr>
             </table>
         </div>
