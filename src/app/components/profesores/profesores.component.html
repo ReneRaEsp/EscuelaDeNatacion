@@ -1,7 +1,28 @@
-<h5 class="text-center mt-2 mb-3 font-weight-bold text-light" > Profesores</h5>
-<a class="btn btn-primary font-weight-bold float-right mr-4 mb-4" href="./profesores/agregar">Agregar Nuevo</a>
+<h5 class="text-center mt-3 mb-3 font-weight-bold text-light" > Profesores</h5>
+<div *ngIf="formulario">
+    <form (ngSubmit)="agregarProfesor()" class="mt-1 p-2 d-flex justify-content-center flex-wrap flex-column">
+        <h5 class="mx-auto mb-2 text-light font-weight-bold">Agregar Nuevo Profesor</h5>
+        <div class="col-12 d-flex justify-content-center flex-wrap">
+            <input [(ngModel)]="nombreInput" class="mx-auto mb-3 col-2 form-control" name="nombre" type="text" placeholder="Nombre">
+            <input [(ngModel)]="apellidoInput" class="mx-auto mb-3 col-2 form-control" name="apellido" type="text" placeholder="Apellido">
+            <input [(ngModel)]="telefonoInput" class="mx-auto mb-3 col-2 form-control" name="telefono" type="text" placeholder="Telefono">
+            <input [(ngModel)]="correoInput" class="mx-auto mb-3 col-2 form-control" name="correo" type="text" placeholder="Correo">
+            <input [(ngModel)]="direccionInput" class="mx-auto mb-3 col-2 form-control" name="direccion" type="text" placeholder="Direccion">
+            <input [(ngModel)]="ciInput" class="mx-auto mb-3 col-2 form-control" name="ci" type="text" placeholder="Cedula de identidad">
+            <input [(ngModel)]="salarioInput" class="mx-auto mb-3 col-2 form-control" name="salario" type="number" placeholder="Salario">
+        </div>
+       <div class="d-flex justify-content-around col-7 mx-auto mt-3">
+            <a class="btn btn-dark col-3 mx-auto"
+                    (click)="ocultarFormulario()"
+            >Volver sin agregar</a>
+            <button type="submit" class="btn btn-primary col-3 mx-auto font-weight-bold">Guardar</button>
+        </div>
+    </form>
+</div>
+<a class="btn btn-primary font-weight-bold float-right mr-4 mb-4"
+ (click)="mostrarFormulario()">Agregar Nuevo</a>
         <div class="contenedorTabla m-auto col-12 d-flex justify-content-center flex-wrap flex-column overflow-auto">
-            <table class="text-light table table-hover overflow-auto" border="1">
+            <table class="text-light table table-hover overflow-auto">
                 <tr>
                     <th>id</th>
                     <th>Nombre</th>
@@ -24,3 +45,4 @@
                 </tr>
             </table>
         </div>
+

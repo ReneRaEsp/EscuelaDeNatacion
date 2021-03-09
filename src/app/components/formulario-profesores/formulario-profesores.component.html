@@ -1,0 +1,17 @@
+<form (ngSubmit)="agregarProfesor()" class="mt-5 p-4 d-flex justify-content-center flex-wrap flex-column">
+    <h3 class="mx-auto mb-4 text-light font-weight-bold">Agregar Nuevo Profesor</h3>
+    <input [(ngModel)]="nombreInput" class="mx-auto mb-3 col-7 form-control" name="nombre" type="text" placeholder="Nombre">
+    <input [(ngModel)]="apellidoInput" class="mx-auto mb-3 col-7 form-control" name="apellido" type="text" placeholder="Apellido">
+    <input [(ngModel)]="telefonoInput" class="mx-auto mb-3 col-7 form-control" name="telefono" type="text" placeholder="Telefono">
+    <input [(ngModel)]="correoInput" class="mx-auto mb-3 col-7 form-control" name="correo" type="text" placeholder="Correo">
+    <input [(ngModel)]="direccionInput" class="mx-auto mb-3 col-7 form-control" name="direccion" type="text" placeholder="Direccion">
+    <input [(ngModel)]="ciInput" class="mx-auto mb-3 col-7 form-control" name="ci" type="text" placeholder="Cedula de identidad">
+    <input [(ngModel)]="salarioInput" class="mx-auto mb-3 col-7 form-control" name="salario" type="number" placeholder="Salario">
+    <div class="d-flex justify-content-around col-7 mx-auto mt-3">
+        <a class="btn btn-dark col-3 mx-auto"
+                href="./profesores"
+        >Volver sin guardar</a>
+        <button type="submit" class="btn btn-primary col-3 mx-auto font-weight-bold">Guardar</button>
+    </div>
+    {{nombreInput}}
+</form>

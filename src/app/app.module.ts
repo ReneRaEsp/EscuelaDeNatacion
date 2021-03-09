@@ -1,6 +1,7 @@
+//Angular Services
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { FormsModule } from '@angular/forms';
 //Routing
 import { AppRoutingModule } from './app-routing.module';
 //Componentes
@@ -13,7 +14,9 @@ import { RepresentantesComponent } from './components/representantes/representan
 import { MainComponent } from './components/main/main.component';
 import { HeaderComponent } from './components/header/header.component';
 //Servicios
-import { ProfesorService } from './models/profesor.service';
+import { ProfesorService } from './services/profesor.service';
+import { FormularioProfesoresComponent } from './components/formulario-profesores/formulario-profesores.component';
+
 
 @NgModule({
   declarations: [
@@ -24,11 +27,13 @@ import { ProfesorService } from './models/profesor.service';
     ProfesoresComponent,
     RepresentantesComponent,
     MainComponent,
-    HeaderComponent
+    HeaderComponent,
+    FormularioProfesoresComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [ProfesorService],
   bootstrap: [AppComponent]

@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AlumnosMayoresComponent } from './components/alumnos-mayores/alumnos-mayores.component';
 import { AlumnosMenoresComponent } from './components/alumnos-menores/alumnos-menores.component';
+import { FormularioProfesoresComponent } from './components/formulario-profesores/formulario-profesores.component';
 import { HeaderComponent } from './components/header/header.component';
 import { HorarioComponent } from './components/horario/horario.component';
 import { MainComponent } from './components/main/main.component';
@@ -12,6 +13,7 @@ const routes: Routes = [
   { path: '', component: HeaderComponent},
   { path: 'alumnos-mayores', component: AlumnosMayoresComponent},
   { path: 'profesores', component: ProfesoresComponent},
+  { path: 'profesores/agregar', component: FormularioProfesoresComponent},
   { path: 'alumnos-menores', component: AlumnosMenoresComponent},
   { path: 'representantes', component: RepresentantesComponent},
   { path: 'horario', component: HorarioComponent}
